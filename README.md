@@ -1,1 +1,1 @@
-# instinct-hub-dashboard
+# Project Management Dashboard
