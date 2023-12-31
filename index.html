@@ -13,13 +13,19 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!--embed chart.js libraries-->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--embed chart.js libraries-->
+
 </head>
 
 <body>
 
     <div class="dashboard"><!--dashboard starts-->
 
-        <section class="navigation"><!--navigation starts-->
+        <section class="navigation"><!--navigation section starts-->
 
             <img src="img/whatsapp-logo.svg" alt="WhatsApp Logo">
 
@@ -37,9 +43,9 @@
 
             </div>
 
-        </section><!--navigation ends-->
+        </section><!--navigation section ends-->
 
-        <section class="main"><!--main starts-->
+        <section class="main"><!--main section starts-->
 
             <div class="search"><!--search starts-->
 
@@ -271,13 +277,59 @@
 
             </div><!--project-list ends-->
 
-        </section><!--main ends-->
+        </section><!--main section ends-->
 
-        <section class="secondary"><!--secondary starts-->
+        <section class="secondary"><!--secondary section starts-->
 
-        </section><!--secondary ends-->
+            <div class="chart">
+
+                <h2>Total Projects</h2>
+
+                <div><!--embedded chart.js-->
+                    
+                    <canvas id="myChart"></canvas>
+                
+                </div><!--embedded chart.js-->
+
+            </div>
+
+        </section><!--secondary section ends-->
 
     </div><!--dashboard ends-->
+
+    <!--script for generating chart-->
+
+    <script>
+
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: [
+                 'Completed',
+                 'Ongoing',
+                 'Stalled',
+                 'Recent'
+                ],
+                
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [300, 150, 200, 100],
+                    backgroundColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(54, 162, 235)',
+                        'rgb(255, 205, 86)',
+                        'rgb(200, 160, 75)'
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+        });
+
+    </script>
+
+    <!--script for generating chart-->
     
 </body>
 
