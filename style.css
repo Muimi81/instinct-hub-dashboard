@@ -1,0 +1,19 @@
+/*CSS styling for the Project Management Dashboard project*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: aliceblue;
+}
+
+.dashboard {
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+
+
+/* styling the navigation section */
